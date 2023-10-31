@@ -5,41 +5,36 @@ import java.util.List;
 
 public class SubChapter {
     private String name;
-    private List<Image> images;
-    private List<Paragraph> paragraphs;
-    private List<Table> tables;
+    private List<Element> elements;
     public SubChapter(String name) {
         this.name = name;
-        this.images = new ArrayList<>();
-        this.paragraphs = new ArrayList<>();
-        this.tables = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
     public void print() {
         System.out.println("Subchapter: " + name);
-        for (Paragraph p : paragraphs) {
-            p.print();
+        for (Element e : elements) {
+            e.print();
         }
-        for (Image i : images) {
-            i.print();
-        }
-        for (Table t : tables) {
-            t.print();
-        }
+
+    }
+    public void addElement(Element e) {
+        elements.add(e);
+        elements.sort((o1, o2) -> o1.getIndex() - o2.getIndex());
     }
 
 
     public void createNewParagraph(String text) {
         Paragraph p = new Paragraph(text);
-        paragraphs.add(p);
+        addElement(p);
     }
 
     public void createNewImage(String imageName) {
         Image i = new Image(imageName);
-        images.add(i);
+        addElement(i);
     }
 
     public void createNewTable(String title) {
         Table t = new Table(title);
-        tables.add(t);
+        addElement(t);
     }
 }
