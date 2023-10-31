@@ -13,8 +13,5 @@ public class Image implements Element {
     }
 
 
-    public int getIndex() {
-        return 2;
-    }
 
 }

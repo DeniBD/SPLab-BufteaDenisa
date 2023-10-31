@@ -11,7 +11,4 @@ public class Paragraph implements Element{
         System.out.println("Paragraph: " + text);
     }
 
-    public int getIndex() {
-        return 1;
-    }
 }

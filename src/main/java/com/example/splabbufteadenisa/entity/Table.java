@@ -11,7 +11,4 @@ public class Table implements Element {
         System.out.println("Table with Title: " + title);
     }
 
-    public int getIndex() {
-        return 3;
-    }
 }
