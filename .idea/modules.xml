@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SPLab-BufteaDenisa.iml" filepath="$PROJECT_DIR$/.idea/SPLab-BufteaDenisa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPLab-BufteaDenisa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SPLab-BufteaDenisa.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPLab-BufteaDenisa.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SPLab-BufteaDenisa.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.SPLab-BufteaDenisa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.SPLab-BufteaDenisa.main.iml" />
     </modules>
   </component>
 </project>
