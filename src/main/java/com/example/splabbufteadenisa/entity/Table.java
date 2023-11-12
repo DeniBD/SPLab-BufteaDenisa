@@ -1,6 +1,6 @@
 package com.example.splabbufteadenisa.entity;
 
-public class Table implements Element {
+public class Table extends Element {
     private String title;
 
     public Table(String title) {
@@ -11,7 +11,4 @@ public class Table implements Element {
         System.out.println("Table with Title: " + title);
     }
 
-    public int getIndex() {
-        return 3;
-    }
 }

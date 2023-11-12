@@ -3,40 +3,40 @@ package com.example.splabbufteadenisa.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
-    private String title;
+public class Book extends Section {
     private List<Author> authors;
-    private List<Chapter> chapters;
 
     public Book(String title) {
-        this.title = title;
+        super(title);
         this.authors = new ArrayList<>();
-        this.chapters = new ArrayList<>();
-
     }
 
-
     public void print() {
-        System.out.println("Book: " + title);
+
+        System.out.println("Book: " + super.title + "\n");
+
+        System.out.println("Authors: ");
+
         for (Author a : authors) {
             a.print();
         }
-        for (Chapter c : chapters) {
-            c.print();
+        System.out.println();
+
+        for (Element e : super.elements) {
+            e.print();
         }
+        //super.print();
     }
 
     public void addAuthor(Author author) {
         authors.add(author);
     }
 
-    public int createChapter(String name) {
-        Chapter c = new Chapter(name);
-        chapters.add(c);
-        return chapters.indexOf(c);
-    }
-
-    public Chapter getChapter(int indexChapter) {
-        return chapters.get(indexChapter);
+    public void addContent(Element element) {
+        try {
+            super.add(element);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 }
