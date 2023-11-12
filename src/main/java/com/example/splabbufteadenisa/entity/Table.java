@@ -1,6 +1,6 @@
 package com.example.splabbufteadenisa.entity;
 
-public class Table implements Element {
+public class Table extends Element {
     private String title;
 
     public Table(String title) {

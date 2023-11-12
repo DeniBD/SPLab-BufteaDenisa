@@ -3,7 +3,7 @@ package com.example.splabbufteadenisa.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section extends Element {
     protected String title;
     protected List<Element> elements;
 
@@ -19,12 +19,19 @@ public class Section implements Element {
         }
     }
 
-    public void add(Element element) {
-        elements.add(element);
+    public void add(Element element) throws IllegalArgumentException {
+        if(element.getParent() == null) {
+            element.setParent(this);
+            elements.add(element);
+        }
+        else {
+            throw new IllegalArgumentException("Element already has a parent");
+        }
     }
 
     public void remove(Element element) {
         elements.remove(element);
+        element.setParent(null);
     }
 
     public Element get(int index) {

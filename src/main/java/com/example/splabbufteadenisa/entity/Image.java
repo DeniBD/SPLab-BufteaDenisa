@@ -1,6 +1,6 @@
 package com.example.splabbufteadenisa.entity;
 
-public class Image implements Element {
+public class Image extends Element {
     private String imageName;
 
     public Image(String imageName) {

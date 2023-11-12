@@ -33,6 +33,10 @@ public class Book extends Section {
     }
 
     public void addContent(Element element) {
-        super.add(element);
+        try {
+            super.add(element);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 }

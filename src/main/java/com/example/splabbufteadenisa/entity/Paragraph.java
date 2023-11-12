@@ -1,6 +1,6 @@
 package com.example.splabbufteadenisa.entity;
 
-public class Paragraph implements Element{
+public class Paragraph extends Element{
     private String text;
 
     public Paragraph(String text) {
