@@ -1,10 +1,18 @@
 package com.example.splabbufteadenisa.entity;
 
-public class Image extends Element {
+import java.util.concurrent.TimeUnit;
+
+public class Image extends Element implements Picture {
     private String imageName;
+    private ImageProxy imageProxy;
 
     public Image(String imageName) {
         this.imageName = imageName;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     // crate a print method
