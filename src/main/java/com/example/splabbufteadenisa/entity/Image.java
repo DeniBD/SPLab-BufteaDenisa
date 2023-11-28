@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Image extends Element implements Picture {
     private String imageName;
-    private ImageProxy imageProxy;
 
     public Image(String imageName) {
         this.imageName = imageName;
