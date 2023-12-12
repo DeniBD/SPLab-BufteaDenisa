@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +19,9 @@ public class Image extends Element implements Picture {
         System.out.println("Image with name: " + imageName);
     }
 
+    void accept(Visitor visitor) {
+        visitor.visitImage(this);
+    }
 
 
 }

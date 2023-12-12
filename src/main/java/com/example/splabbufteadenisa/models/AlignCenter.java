@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 public class AlignCenter implements AlignStrategy{
     public void render(String text) {

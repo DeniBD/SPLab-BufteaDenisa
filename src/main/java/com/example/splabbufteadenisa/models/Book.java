@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,4 +39,12 @@ public class Book extends Section {
             e.printStackTrace();
         }
     }
+
+    public void accept(Visitor visitor) {
+        visitor.visitBook(this);
+        for (Element element : super.elements) {
+            element.accept(visitor);
+        }
+    }
+
 }

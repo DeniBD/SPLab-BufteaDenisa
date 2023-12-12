@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 public class ImageProxy extends Element implements Picture {
 
@@ -19,5 +19,9 @@ public class ImageProxy extends Element implements Picture {
     public void print() {
         this.loadImage();
         this.realImage.print();
+    }
+
+    void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
     }
 }
