@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 public class Paragraph extends Element{
     private String text;
@@ -16,6 +16,10 @@ public class Paragraph extends Element{
         else {
             this.alignStrategy.render(this.text);
         }
+    }
+
+    void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
     }
 
     public void setAlignStrategy(AlignStrategy alignStrategy)   {

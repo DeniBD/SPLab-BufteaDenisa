@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 public class Table extends Element {
     private String title;
@@ -9,6 +9,10 @@ public class Table extends Element {
 
     public void print() {
         System.out.println("Table with Title: " + title);
+    }
+
+    void accept(Visitor visitor) {
+        visitor.visitTable(this);
     }
 
 }

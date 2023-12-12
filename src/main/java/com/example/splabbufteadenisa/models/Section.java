@@ -1,4 +1,4 @@
-package com.example.splabbufteadenisa.entity;
+package com.example.splabbufteadenisa.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,15 @@ public class Section extends Element {
 
     public void print() {
         System.out.println(title);
+//        for (Element e : elements) {
+//            e.print();
+//        }
+    }
+
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
         for (Element e : elements) {
-            e.print();
+            e.accept(visitor);
         }
     }
 
